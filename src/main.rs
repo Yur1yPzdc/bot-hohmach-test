@@ -1,4 +1,5 @@
 use std::env;
+use dotenv::dotenv;
 
 use serenity::async_trait;
 use serenity::model::channel::Message;
@@ -37,6 +38,7 @@ impl EventHandler for Handler {
 #[tokio::main]
 async fn main() {
     // Configure the client with your Discord bot token in the environment.
+    dotenv().ok();
     let token = env::var("DISCORD_TOKEN").expect("Expected a token in the environment");
     // Set gateway intents, which decides what events the bot will be notified about
     let intents = GatewayIntents::GUILD_MESSAGES
