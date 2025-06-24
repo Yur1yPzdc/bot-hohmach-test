@@ -17,7 +17,6 @@ use songbird::SerenityInit;
 
 const LOG_CHANNEL: ChannelId = ChannelId::new(1385405814440988694);
 
-
 struct Handler;
 
 #[async_trait]
@@ -151,6 +150,7 @@ async fn leavevc(ctx: &Context, msg: Message) {
 async fn play(ctx: &Context, msg: Message) {
     
     let name_to_path_string: HashMap<&str, &str> = HashMap::from([
+        ("Летова", "D:/bot-rs/assets/letov1.mp3"),
         ("генгаозо", "D:/bot-rs/assets/G e n g a o z o -Noize of Nocent-.mp3"),
         ("че-нить пушистое", "D:/bot-rs/assets/fluff.mp3")
     ]);

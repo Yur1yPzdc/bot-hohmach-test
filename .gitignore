@@ -1,4 +1,4 @@
 Cargo.lock
 .env
 target
-./assets/*.mp3
+assets/*.mp3
